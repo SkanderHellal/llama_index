@@ -136,7 +136,8 @@ class GPTTreeIndexBuilder:
         level: int = 0,
     ) -> IndexGraph:
         """Consolidates chunks recursively, in a bottoms-up fashion."""
-        if len(cur_node_ids) <= self.num_children:
+        #if len(cur_node_ids) <= self.num_children:
+        if len(cur_node_ids) <= 1:
             index_graph.root_nodes = cur_node_ids
             return index_graph
 
